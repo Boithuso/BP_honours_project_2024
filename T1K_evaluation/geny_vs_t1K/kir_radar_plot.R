@@ -1,3 +1,5 @@
+#!/usr/bin/Rscript
+
 #install.packages("tidyverse")
 #install.packages(ggradar)
 library(tidyverse)
