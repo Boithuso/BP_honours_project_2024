@@ -25,6 +25,8 @@ sudo apt install python3.11-venv
 sudo apt-get install zlib1g-dev
 sudo apt-get install python3-dev
 
+
+
 echo --------------------------------------------------------------------------------------
 #Hisatgenotype installation:
 #HISAT-genotype unfortunatetly only be installed and run from the home directory, also running HISAT-genotype commands nessitates that you specify the absolute path to the home directory and not just use the tilde ~
@@ -113,7 +115,7 @@ cd ~
 echo Installing T1K 
 
 git clone https://github.com/mourisl/T1K.git
-cd T1K
+cd T1K/
 
 echo Building allele reference sequences from IPD-IMGT/HLA
 perl t1k-build.pl -o hlaidx --download IPD-IMGT/HLA -d https://ftp.ebi.ac.uk/pub/databases/ipd/imgt/hla/hla.dat -g gencode.gtf
@@ -124,5 +126,15 @@ perl t1k-build.pl -o kiridx --download IPD-KIR --partial-intron-noseq -d https:/
 #echo Genotyping example dataset with T1K
 #./run-t1k -f kiridx/kiridx_rna_seq.fa -1 example/example_1.fq -2 example/example_2.fq -t 8 -o T1K_example
 
-echo "DONE!!"
 cd
+
+
+echo ---------------------------------------------------------------------------------------------
+
+echo Building GATK
+sudo apt install openjdk-17-jdk
+wget https://github.com/broadinstitute/picard/releases/download/2.27.4/picard.jar
+sudo mv picard.jar /usr/local/bin/
+git clone https://github.com/broadinstitute/gatk
+cd gatk/
+./gradlew bundle
