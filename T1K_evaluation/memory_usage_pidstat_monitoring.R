@@ -1,3 +1,5 @@
+#!/usr/bin/Rscript
+
 #install.packages("tidyverse")
 library(tidyverse)
 #set the working directory as the directory with the pidstat memory consumption files
