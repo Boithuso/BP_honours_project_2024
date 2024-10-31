@@ -1,3 +1,5 @@
+#!/usr/bin/Rscript
+
 library(tidyverse)
 library(tidyr)
 library(dplyr)
