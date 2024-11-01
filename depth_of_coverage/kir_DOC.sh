@@ -5,7 +5,7 @@
 
 python3 gatk DepthOfCoverage -R genome.fa -O kir_DOC -I input_bams.list \
 -DF NotSecondaryAlignmentReadFilter \
--gene-list hla_genes_and_gene_predictions.refseq \
+-gene-list kir_genes_and_gene_predictions.refseq \
 -L KV575254.1 -L KV575246.1 -L KV575256.1 -L KV575253.1 -L KV575252.1 -L KV575255.1 -L KV575259.1 \
 -L KI270917.1 -L KI270918.1 -L KI270919.1 -L KV575247.1 -L KV575248.1 -L KV575250.1 -L KV575249.1 \
 -L KV575257.1 -L -L KI270920.1 -L KI270921.1 -L KI270922.1 -L KI270923.1 -L KI270929.1 -L KI270930.1 \
