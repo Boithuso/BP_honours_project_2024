@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 #the input directory must contain bam files that are indexed and have there read groups
 #within the gatk directory my have a list "input_bams.list" with the bam files
