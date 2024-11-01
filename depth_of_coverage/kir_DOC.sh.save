@@ -1,0 +1,11 @@
+!/bin/bash
+
+#the input directory must contain bam files that are indexed and have there read groups
+#within the gatk directory my have a list "input_bams.list" with the bam files
+
+python3 gatk DepthOfCoverage -R genome.fa -O kir_DOC -I input_bams.list \
+-DF NotSecondaryAlignmentReadFilter \
+-gene-list hla_genes_and_gene_predictions.refseq \
+-L KV575254.1 -L KV575246.1 -L KV575256.1 -L KV575253.1 -L KV575252.1 -L KV575255.1 -L KV575259.1 \
+-L KI270917.1 -L GL000255.2 -L GL000256.2 \
+-L chr6:29700000-33500000
